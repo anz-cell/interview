@@ -61,7 +61,7 @@ function RecordAnswerSection({mockInterviewQuestion,activeQuestionIndex,intervie
         setLoading(true)
         const feedbackPrompt="Question:"+mockInterviewQuestion[activeQuestionIndex]?.question+
         ", User Answer:"+userAnswer+",Depends on question and user answer for give interview question "+
-        " please give us rating for answer and feedback as area of improvmenet if any "+
+        " please give us rating for answer ranging from 0 to 10 and feedback as area of improvmenet if any "+
         "in just 3 to 5 lines to improve it in JSON format with rating field and feedback field";
 
         const result=await chatSession.sendMessage(feedbackPrompt);
